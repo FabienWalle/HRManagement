@@ -1,0 +1,24 @@
+{% extends "../base.twig" %}
+{% block style %}
+	<link rel="stylesheet" href="/css/subscribe.css">
+{% endblock %}
+
+
+{% block title %}
+	<title>HRManagement - S'inscrire</title>
+{% endblock %}
+
+
+{% block main %}
+	<div id="subscribe">
+		<form action="/subscribe" method="POST" id="form">
+			<h2 id="subscribeTitle">Inscrivez-vous</h2>
+			<input id="name" placeholder="name" name="name">
+			<input id="SIRET" placeholder="SIRET" name="SIRET">
+			<input id="email" placeholder="e-mail" name="email">
+			<input id="CEO" placeholder="CEO" name="CEO">
+			<input id="password" placeholder="mot de passe" name="password">
+			<button type="submit">Valider</button>
+		</form>
+	</div>
+{% endblock %}

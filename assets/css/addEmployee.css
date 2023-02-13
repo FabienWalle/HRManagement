@@ -1,0 +1,91 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body {
+    background-color: grey;
+    color: white;
+    display: flex;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    flex-direction: column;
+    height: 98vh;
+    width: 98vw;
+}
+
+main {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    height:50vh;
+    margin:auto 0 auto 0;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+
+nav {
+    background-color: green;
+    position:sticky;
+    top:0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+nav li {
+    list-style: none;
+}
+
+
+.employeeCard {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    font-size: large;
+    width: 35vw;
+    height: 50vh;
+    border: 5px solid green;
+    border-radius: 10%
+}
+
+.employeeFace {
+    max-height: 200px;
+    max-width: 200px;
+    margin: 0 auto 0 auto;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+}
+
+.employeeDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+form {
+    height: 50vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 3px solid black;
+}
+
+input {
+    height: 30px;
+    width: 300px
+}

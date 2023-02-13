@@ -1,0 +1,32 @@
+<form 
+action={% if employee %} "/updateEmployee/{{employee.id}}" {% else %} "/addEmployee" {% endif %} 
+method="POST" 
+class="updateForm" 
+enctype='multipart/form-data'>
+	{% if employee %}
+		<h2>Formulaire de mise à jour</h2>
+	{% else %}
+		<h2>Ajout d'un employé</h2>
+	{% endif %}
+	<input 
+	class="firstname" 
+	placeholder={% if employee %} "{{employee.firstname}}" {% else %} "prénom" {% endif %} 
+	{% if employee %} value="{{employee.firstname}}" {% endif %} 
+	name="firstname">
+	<input 
+	class="lastname" 
+	placeholder={% if employee %} "{{employee.lastname}}" {% else %} "nom" {% endif %} {% if employee %} value="{{employee.lastname}}" {% endif %} 
+	name="lastname">
+	<input 
+	type="file" 
+	class="image" 
+	name="image" 
+	placeholder="{{employee.image}}">
+	<input 
+	class="role" 
+	placeholder={% if employee %} "{{employee.role}}" {% else %} "role" {% endif %} 
+	{% if employee %} value="{{employee.role}}" {% endif %} 
+	name="role">
+	<button class="formButton" type="submit">
+	{% if employee %}mettre à jour {% else %} ajouter un employé {% endif %}</button>
+</form>

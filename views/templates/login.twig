@@ -1,0 +1,27 @@
+{% extends "../base.twig" %}
+
+{% block style %}
+	<link rel="stylesheet" href="/css/login.css">
+{% endblock %}
+
+{% block title %}
+	<title>HR Management - login</title>
+{% endblock %}
+
+
+{% block main %}
+	<h1>Bienvenue sur H R Management</h1>
+	<div id="loginFrame">
+	<form action="/login" method="POST" id="form">
+		<h2 id="title">Connexion</h2>
+		<input id="email" placeholder="email" name="email">
+		<input id="password" placeholder="mot de passe" name="password">
+		<button type="submit">Se connecter</button>
+	</form>
+	<div id="subscribe">
+		<h2 id="subscribeTitle">Pas encore inscrit? C'est
+			<a href="/subscribe">ici</a>
+		</h2>
+	</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "../base.twig" %}
+
+{% block style %}
+	<link rel="stylesheet" href="/css/main.css">
+{% endblock %}
+{% block title %}
+	<title>Tableau de bord RH</title>
+{% endblock %}
+
+{% block nav %}
+	{% include "../layout/_nav.twig" %}
+{% endblock %}
+
+{% block header %}
+	<h1>Bienvenue sur le tableau de bord de votre entreprise</h1>
+{% endblock %}
+
+{% block main %}
+	<div id="showEmployee">
+		{% for employee in employees %}
+			<div class="employeeCard">
+				<div class="employeeFace">
+					<img src="./uploads/{{employee.image}}" alt="employeeFace">
+				</div>
+				<div class="employeeDetails">
+					<span class="firstname">Prénom :
+						{{employee.firstname}}</span>
+					<span class="lastname">Nom :
+						{{employee.lastname}}</span>
+					<span class="role">Role :
+						{{employee.role}}</span>
+					<span class="blameNumber">Nombre de blame :
+						{{employee.blame}}</span>
+					<a href="/addBlame/{{employee.id}}">Ajouter un blâme</a>
+					<a href="/deleteBlame/{{employee.id}}">supprimer un blâme</a>
+					<a href="/updateEmployee/{{employee.id}}">mettre à jour</a>
+					<a href="/deleteEmployee/{{employee.id}}">supprimer cet employé</a>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}

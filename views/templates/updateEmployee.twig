@@ -1,0 +1,38 @@
+{% extends "../base.twig" %}
+
+
+{% block style %}
+	<link rel="stylesheet" href="/css/updateEmployee.css">
+{% endblock %}
+{% block title %}
+	<title>Mise à jour d'un employé</title>
+{% endblock %}
+
+{% block nav %}
+	{% include "../layout/_nav.twig" %}
+{% endblock %}
+{% block header %}
+	<h1>Mise à jour d'un employé</h1>
+{% endblock %}
+{% block main %}
+	<main>
+		<div class="employeeCard">
+			<div class="employeeFace">
+				<img src="/uploads/{{employee.image}}" alt="employeeFace">
+			</div>
+			<div class="employeeDetails">
+				<span class="firstname">Prénom :
+					{{employee.firstname}}</span>
+				<span class="lastname">Nom :
+					{{employee.lastname}}</span>
+				<span class="role">Role :
+					{{employee.role}}</span>
+				<span class="blameNumber">Nombre de blame :
+					{{employee.blame}}</span>
+				<span class="imageURL">URL de l'image :
+					{{employee.image}}</span>
+			</div>
+		</div>
+		{% include "../layout/_formEmployee.twig" %}
+	</main>
+{% endblock %}

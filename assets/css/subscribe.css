@@ -1,0 +1,29 @@
+body {
+    height: 95vh;
+    width: 95vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    background-color: grey;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    height:50vh;
+    width:50vw;
+    justify-content: space-around;
+    align-items: center;
+}
+
+input {
+    width:300px;
+    height:30px;
+}
+
+button {
+    height:30px;
+    width:150px
+}

@@ -1,0 +1,20 @@
+	{% extends "../base.twig" %}	
+		{% block style %}
+			<link rel="stylesheet" href="/css/addEmployee.css">
+		{% endblock %}
+		{% block title %}
+			<title>Ajouter un employé</title>
+		{% endblock %}
+
+{% block nav %}
+	{% include "../layout/_nav.twig" %}
+{% endblock %}
+		{% block main %}
+		<main>
+			<div id="addEmployeeFrame">
+				{% include "../layout/_formEmployee.twig" %}
+			</div>
+			</main>
+		{% endblock %}
+
+
